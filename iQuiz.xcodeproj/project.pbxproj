@@ -153,15 +153,12 @@
 		E4CF3DC226BEF5BF0015AEA5 /* iQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				E4CF3E1026BF0D7C0015AEA5 /* Supporting Files */,
 				E4CF3DFA26BEF87D0015AEA5 /* Extensions */,
 				E4CF3DFC26BEF88E0015AEA5 /* Models */,
 				E4CF3DFD26BEF8940015AEA5 /* Services */,
 				E4CF3DFE26BEF89E0015AEA5 /* UI */,
 				E4CF3E0326BEFF260015AEA5 /* Utils */,
-				E4CF3DC326BEF5BF0015AEA5 /* AppDelegate.swift */,
-				E4CF3DC526BEF5BF0015AEA5 /* SceneDelegate.swift */,
-				E4CF3DCC26BEF5C10015AEA5 /* Assets.xcassets */,
-				E4CF3DCE26BEF5C10015AEA5 /* LaunchScreen.storyboard */,
 				E4CF3DD126BEF5C10015AEA5 /* Info.plist */,
 				E4CF3E0426BF00050015AEA5 /* GoogleService-Info.plist */,
 			);
@@ -259,6 +256,17 @@
 				E4CF3E0626BF00F80015AEA5 /* ViewCode.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E4CF3E1026BF0D7C0015AEA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4CF3DC326BEF5BF0015AEA5 /* AppDelegate.swift */,
+				E4CF3DC526BEF5BF0015AEA5 /* SceneDelegate.swift */,
+				E4CF3DCC26BEF5C10015AEA5 /* Assets.xcassets */,
+				E4CF3DCE26BEF5C10015AEA5 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
