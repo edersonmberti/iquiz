@@ -12,7 +12,6 @@
 		89A6848C16AC67B7BB589878 /* Pods_iQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F38B8E78F6A99B718B8E4B /* Pods_iQuiz.framework */; };
 		E4CF3DC426BEF5BF0015AEA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DC326BEF5BF0015AEA5 /* AppDelegate.swift */; };
 		E4CF3DC626BEF5BF0015AEA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DC526BEF5BF0015AEA5 /* SceneDelegate.swift */; };
-		E4CF3DC826BEF5BF0015AEA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DC726BEF5BF0015AEA5 /* ViewController.swift */; };
 		E4CF3DCD26BEF5C10015AEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4CF3DCC26BEF5C10015AEA5 /* Assets.xcassets */; };
 		E4CF3DD026BEF5C10015AEA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4CF3DCE26BEF5C10015AEA5 /* LaunchScreen.storyboard */; };
 		E4CF3DDB26BEF5C10015AEA5 /* iQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DDA26BEF5C10015AEA5 /* iQuizTests.swift */; };
@@ -58,7 +57,6 @@
 		E4CF3DC026BEF5BF0015AEA5 /* iQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CF3DC326BEF5BF0015AEA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4CF3DC526BEF5BF0015AEA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E4CF3DC726BEF5BF0015AEA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E4CF3DCC26BEF5C10015AEA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4CF3DCF26BEF5C10015AEA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4CF3DD126BEF5C10015AEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				E4CF3E0326BEFF260015AEA5 /* Utils */,
 				E4CF3DC326BEF5BF0015AEA5 /* AppDelegate.swift */,
 				E4CF3DC526BEF5BF0015AEA5 /* SceneDelegate.swift */,
-				E4CF3DC726BEF5BF0015AEA5 /* ViewController.swift */,
 				E4CF3DCC26BEF5C10015AEA5 /* Assets.xcassets */,
 				E4CF3DCE26BEF5C10015AEA5 /* LaunchScreen.storyboard */,
 				E4CF3DD126BEF5C10015AEA5 /* Info.plist */,
@@ -505,7 +502,6 @@
 				E4CF3E0D26BF01CB0015AEA5 /* FakeLaunchScreenPresenter.swift in Sources */,
 				E4CF3DF526BEF6920015AEA5 /* FakeLaunchScreenViewController.swift in Sources */,
 				E4CF3DF926BEF82B0015AEA5 /* LoginController.swift in Sources */,
-				E4CF3DC826BEF5BF0015AEA5 /* ViewController.swift in Sources */,
 				E4CF3E0726BF00F80015AEA5 /* ViewCode.swift in Sources */,
 				E4CF3DF726BEF6AF0015AEA5 /* MainTabBarController.swift in Sources */,
 				E4CF3E0B26BF01980015AEA5 /* FakeLaunchScreenView.swift in Sources */,
