@@ -28,7 +28,7 @@ extension FakeLaunchScreenViewController: FakeLaunchScreenViewProtocol {
     func redirectUser(isAuthenticated: Bool) {
         let controller = isAuthenticated ?
             MainTabBarController() :
-            UINavigationController(rootViewController: LoginController())
+            UINavigationController(rootViewController: LoginViewController())
         
         controller.modalPresentationStyle = .fullScreen
         self.present(controller, animated: false, completion: nil)

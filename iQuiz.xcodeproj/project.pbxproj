@@ -18,13 +18,15 @@
 		E4CF3DE626BEF5C10015AEA5 /* iQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DE526BEF5C10015AEA5 /* iQuizUITests.swift */; };
 		E4CF3DF526BEF6920015AEA5 /* FakeLaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DF426BEF6920015AEA5 /* FakeLaunchScreenViewController.swift */; };
 		E4CF3DF726BEF6AF0015AEA5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DF626BEF6AF0015AEA5 /* MainTabBarController.swift */; };
-		E4CF3DF926BEF82B0015AEA5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DF826BEF82B0015AEA5 /* LoginController.swift */; };
+		E4CF3DF926BEF82B0015AEA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DF826BEF82B0015AEA5 /* LoginViewController.swift */; };
 		E4CF3E0526BF00050015AEA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4CF3E0426BF00050015AEA5 /* GoogleService-Info.plist */; };
 		E4CF3E0726BF00F80015AEA5 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E0626BF00F80015AEA5 /* ViewCode.swift */; };
 		E4CF3E0926BF013B0015AEA5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E0826BF013B0015AEA5 /* BaseViewController.swift */; };
 		E4CF3E0B26BF01980015AEA5 /* FakeLaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E0A26BF01980015AEA5 /* FakeLaunchScreenView.swift */; };
 		E4CF3E0D26BF01CB0015AEA5 /* FakeLaunchScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E0C26BF01CB0015AEA5 /* FakeLaunchScreenPresenter.swift */; };
 		E4CF3E0F26BF03AC0015AEA5 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E0E26BF03AC0015AEA5 /* UIView+Constraints.swift */; };
+		E4CF3E1226BF0E170015AEA5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E1126BF0E170015AEA5 /* LoginView.swift */; };
+		E4CF3E1426BF0E1F0015AEA5 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E1326BF0E1F0015AEA5 /* LoginPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,13 +70,15 @@
 		E4CF3DE726BEF5C10015AEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4CF3DF426BEF6920015AEA5 /* FakeLaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLaunchScreenViewController.swift; sourceTree = "<group>"; };
 		E4CF3DF626BEF6AF0015AEA5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		E4CF3DF826BEF82B0015AEA5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		E4CF3DF826BEF82B0015AEA5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E4CF3E0426BF00050015AEA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E4CF3E0626BF00F80015AEA5 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		E4CF3E0826BF013B0015AEA5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E4CF3E0A26BF01980015AEA5 /* FakeLaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLaunchScreenView.swift; sourceTree = "<group>"; };
 		E4CF3E0C26BF01CB0015AEA5 /* FakeLaunchScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLaunchScreenPresenter.swift; sourceTree = "<group>"; };
 		E4CF3E0E26BF03AC0015AEA5 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		E4CF3E1126BF0E170015AEA5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E4CF3E1326BF0E1F0015AEA5 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,7 +239,9 @@
 		E4CF3E0126BEF9970015AEA5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				E4CF3DF826BEF82B0015AEA5 /* LoginController.swift */,
+				E4CF3DF826BEF82B0015AEA5 /* LoginViewController.swift */,
+				E4CF3E1126BF0E170015AEA5 /* LoginView.swift */,
+				E4CF3E1326BF0E1F0015AEA5 /* LoginPresenter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -507,14 +513,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4CF3E1426BF0E1F0015AEA5 /* LoginPresenter.swift in Sources */,
 				E4CF3E0D26BF01CB0015AEA5 /* FakeLaunchScreenPresenter.swift in Sources */,
 				E4CF3DF526BEF6920015AEA5 /* FakeLaunchScreenViewController.swift in Sources */,
-				E4CF3DF926BEF82B0015AEA5 /* LoginController.swift in Sources */,
+				E4CF3DF926BEF82B0015AEA5 /* LoginViewController.swift in Sources */,
 				E4CF3E0726BF00F80015AEA5 /* ViewCode.swift in Sources */,
 				E4CF3DF726BEF6AF0015AEA5 /* MainTabBarController.swift in Sources */,
 				E4CF3E0B26BF01980015AEA5 /* FakeLaunchScreenView.swift in Sources */,
 				E4CF3E0926BF013B0015AEA5 /* BaseViewController.swift in Sources */,
 				E4CF3DC426BEF5BF0015AEA5 /* AppDelegate.swift in Sources */,
+				E4CF3E1226BF0E170015AEA5 /* LoginView.swift in Sources */,
 				E4CF3E0F26BF03AC0015AEA5 /* UIView+Constraints.swift in Sources */,
 				E4CF3DC626BEF5BF0015AEA5 /* SceneDelegate.swift in Sources */,
 			);

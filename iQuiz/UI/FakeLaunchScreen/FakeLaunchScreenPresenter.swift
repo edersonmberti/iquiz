@@ -26,6 +26,6 @@ extension FakeLaunchScreenPresenter: FakeLaunchScreenPresenterProtocol {
     func checkUserAlreadyAuthenticated() {
         // TODO: - Check if user already authenticated
         
-        view?.redirectUser(isAuthenticated: true)
+        view?.redirectUser(isAuthenticated: false)
     }
 }
