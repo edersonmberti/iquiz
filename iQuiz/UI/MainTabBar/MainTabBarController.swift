@@ -13,5 +13,13 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemGreen
+        
+        setupViewControllers()
+    }
+    
+    private func setupViewControllers() {
+        let profile = ProfileViewController()
+        
+        viewControllers = [profile]
     }
 }

@@ -14,9 +14,11 @@ protocol FakeLaunchScreenPresenterProtocol {
 
 class FakeLaunchScreenPresenter {
     
+    private let authService: AuthServiceProtocol
     weak var view: FakeLaunchScreenViewProtocol?
     
-    init(view: FakeLaunchScreenViewProtocol) {
+    init(view: FakeLaunchScreenViewProtocol, authService: AuthServiceProtocol = AuthService()) {
+        self.authService = authService
         self.view = view
     }
 }
@@ -24,8 +26,7 @@ class FakeLaunchScreenPresenter {
 extension FakeLaunchScreenPresenter: FakeLaunchScreenPresenterProtocol {
     
     func checkUserAlreadyAuthenticated() {
-        // TODO: - Check if user already authenticated
-        
-        view?.redirectUser(isAuthenticated: false)
+        let isAuthenticated = authService.isAuthenticated()
+        self.view?.redirectUser(isAuthenticated: isAuthenticated)
     }
 }

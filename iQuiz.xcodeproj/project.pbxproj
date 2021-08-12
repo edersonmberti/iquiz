@@ -10,6 +10,19 @@
 		15B9C6AC8BC3D97F214B3F9A /* Pods_iQuiz_iQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9FAB1C0A089DEA48E04652 /* Pods_iQuiz_iQuizUITests.framework */; };
 		69AFF44EA0AB6A480E5C277F /* Pods_iQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D785FB7E1705AA40491E42A /* Pods_iQuizTests.framework */; };
 		89A6848C16AC67B7BB589878 /* Pods_iQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F38B8E78F6A99B718B8E4B /* Pods_iQuiz.framework */; };
+		E4779BFB26C085C20041E531 /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4779BFA26C085C20041E531 /* AuthCredentials.swift */; };
+		E4779BFD26C091450041E531 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4779BFC26C091450041E531 /* AuthService.swift */; };
+		E4779C0026C0A49B0041E531 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4779BFF26C0A49B0041E531 /* RegistrationViewController.swift */; };
+		E4779C0226C0A4A70041E531 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4779C0126C0A4A70041E531 /* RegistrationView.swift */; };
+		E4779C0426C0A4B00041E531 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4779C0326C0A4B00041E531 /* RegistrationPresenter.swift */; };
+		E4779C0626C0ABA50041E531 /* UIButton+AttributedTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4779C0526C0ABA50041E531 /* UIButton+AttributedTitle.swift */; };
+		E483283426C0658D00B42B8A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483283326C0658D00B42B8A /* CustomTextField.swift */; };
+		E483283626C0674A00B42B8A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483283526C0674A00B42B8A /* CustomButton.swift */; };
+		E4A8676D26C1EC910097C0F5 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8676C26C1EC910097C0F5 /* Registration.swift */; };
+		E4A8677126C1ED880097C0F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8677026C1ED880097C0F5 /* Constants.swift */; };
+		E4A8677426C1F32B0097C0F5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8677326C1F32B0097C0F5 /* ProfileViewController.swift */; };
+		E4A8677626C1F3340097C0F5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8677526C1F3340097C0F5 /* ProfileView.swift */; };
+		E4A8677826C1F33C0097C0F5 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8677726C1F33C0097C0F5 /* ProfilePresenter.swift */; };
 		E4CF3DC426BEF5BF0015AEA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DC326BEF5BF0015AEA5 /* AppDelegate.swift */; };
 		E4CF3DC626BEF5BF0015AEA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DC526BEF5BF0015AEA5 /* SceneDelegate.swift */; };
 		E4CF3DCD26BEF5C10015AEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4CF3DCC26BEF5C10015AEA5 /* Assets.xcassets */; };
@@ -19,7 +32,6 @@
 		E4CF3DF526BEF6920015AEA5 /* FakeLaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DF426BEF6920015AEA5 /* FakeLaunchScreenViewController.swift */; };
 		E4CF3DF726BEF6AF0015AEA5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DF626BEF6AF0015AEA5 /* MainTabBarController.swift */; };
 		E4CF3DF926BEF82B0015AEA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DF826BEF82B0015AEA5 /* LoginViewController.swift */; };
-		E4CF3E0526BF00050015AEA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4CF3E0426BF00050015AEA5 /* GoogleService-Info.plist */; };
 		E4CF3E0726BF00F80015AEA5 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E0626BF00F80015AEA5 /* ViewCode.swift */; };
 		E4CF3E0926BF013B0015AEA5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E0826BF013B0015AEA5 /* BaseViewController.swift */; };
 		E4CF3E0B26BF01980015AEA5 /* FakeLaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E0A26BF01980015AEA5 /* FakeLaunchScreenView.swift */; };
@@ -27,6 +39,7 @@
 		E4CF3E0F26BF03AC0015AEA5 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E0E26BF03AC0015AEA5 /* UIView+Constraints.swift */; };
 		E4CF3E1226BF0E170015AEA5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E1126BF0E170015AEA5 /* LoginView.swift */; };
 		E4CF3E1426BF0E1F0015AEA5 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E1326BF0E1F0015AEA5 /* LoginPresenter.swift */; };
+		E4CF3E1626BF15C30015AEA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4CF3E1526BF15C30015AEA5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +69,19 @@
 		BF9FAB1C0A089DEA48E04652 /* Pods_iQuiz_iQuizUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iQuiz_iQuizUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A85A8E77D4986E48E2ACC6 /* Pods-iQuiz-iQuizUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iQuiz-iQuizUITests.release.xcconfig"; path = "Target Support Files/Pods-iQuiz-iQuizUITests/Pods-iQuiz-iQuizUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CBEFD9A4A0D5AFDD5E1D627B /* Pods-iQuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iQuizTests.debug.xcconfig"; path = "Target Support Files/Pods-iQuizTests/Pods-iQuizTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E4779BFA26C085C20041E531 /* AuthCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
+		E4779BFC26C091450041E531 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E4779BFF26C0A49B0041E531 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		E4779C0126C0A4A70041E531 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		E4779C0326C0A4B00041E531 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		E4779C0526C0ABA50041E531 /* UIButton+AttributedTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AttributedTitle.swift"; sourceTree = "<group>"; };
+		E483283326C0658D00B42B8A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		E483283526C0674A00B42B8A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E4A8676C26C1EC910097C0F5 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		E4A8677026C1ED880097C0F5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E4A8677326C1F32B0097C0F5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E4A8677526C1F3340097C0F5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E4A8677726C1F33C0097C0F5 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		E4CF3DC026BEF5BF0015AEA5 /* iQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CF3DC326BEF5BF0015AEA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4CF3DC526BEF5BF0015AEA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +97,6 @@
 		E4CF3DF426BEF6920015AEA5 /* FakeLaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLaunchScreenViewController.swift; sourceTree = "<group>"; };
 		E4CF3DF626BEF6AF0015AEA5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E4CF3DF826BEF82B0015AEA5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		E4CF3E0426BF00050015AEA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E4CF3E0626BF00F80015AEA5 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		E4CF3E0826BF013B0015AEA5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E4CF3E0A26BF01980015AEA5 /* FakeLaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLaunchScreenView.swift; sourceTree = "<group>"; };
@@ -79,6 +104,7 @@
 		E4CF3E0E26BF03AC0015AEA5 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		E4CF3E1126BF0E170015AEA5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E4CF3E1326BF0E1F0015AEA5 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		E4CF3E1526BF15C30015AEA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +158,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E4779BFE26C0A4750041E531 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				E4779BFF26C0A49B0041E531 /* RegistrationViewController.swift */,
+				E4779C0126C0A4A70041E531 /* RegistrationView.swift */,
+				E4779C0326C0A4B00041E531 /* RegistrationPresenter.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		E4A8677226C1F31E0097C0F5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E4A8677326C1F32B0097C0F5 /* ProfileViewController.swift */,
+				E4A8677526C1F3340097C0F5 /* ProfileView.swift */,
+				E4A8677726C1F33C0097C0F5 /* ProfilePresenter.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		E4CF3DB726BEF5BF0015AEA5 = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +210,7 @@
 				E4CF3DFE26BEF89E0015AEA5 /* UI */,
 				E4CF3E0326BEFF260015AEA5 /* Utils */,
 				E4CF3DD126BEF5C10015AEA5 /* Info.plist */,
-				E4CF3E0426BF00050015AEA5 /* GoogleService-Info.plist */,
+				E4CF3E1526BF15C30015AEA5 /* GoogleService-Info.plist */,
 			);
 			path = iQuiz;
 			sourceTree = "<group>";
@@ -191,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				E4CF3E0E26BF03AC0015AEA5 /* UIView+Constraints.swift */,
+				E4779C0526C0ABA50041E531 /* UIButton+AttributedTitle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,6 +245,8 @@
 		E4CF3DFC26BEF88E0015AEA5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E4779BFA26C085C20041E531 /* AuthCredentials.swift */,
+				E4A8676C26C1EC910097C0F5 /* Registration.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,6 +254,7 @@
 		E4CF3DFD26BEF8940015AEA5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E4779BFC26C091450041E531 /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -212,6 +262,8 @@
 		E4CF3DFE26BEF89E0015AEA5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E4A8677226C1F31E0097C0F5 /* Profile */,
+				E4779BFE26C0A4750041E531 /* Registration */,
 				E4CF3E0226BEF9A10015AEA5 /* FakeLaunchScreen */,
 				E4CF3E0126BEF9970015AEA5 /* Login */,
 				E4CF3E0026BEF9620015AEA5 /* MainTabBar */,
@@ -224,6 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				E4CF3E0826BF013B0015AEA5 /* BaseViewController.swift */,
+				E483283326C0658D00B42B8A /* CustomTextField.swift */,
+				E483283526C0674A00B42B8A /* CustomButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -260,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				E4CF3E0626BF00F80015AEA5 /* ViewCode.swift */,
+				E4A8677026C1ED880097C0F5 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -385,7 +440,7 @@
 			files = (
 				E4CF3DD026BEF5C10015AEA5 /* LaunchScreen.storyboard in Resources */,
 				E4CF3DCD26BEF5C10015AEA5 /* Assets.xcassets in Resources */,
-				E4CF3E0526BF00050015AEA5 /* GoogleService-Info.plist in Resources */,
+				E4CF3E1626BF15C30015AEA5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,16 +568,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E483283426C0658D00B42B8A /* CustomTextField.swift in Sources */,
 				E4CF3E1426BF0E1F0015AEA5 /* LoginPresenter.swift in Sources */,
 				E4CF3E0D26BF01CB0015AEA5 /* FakeLaunchScreenPresenter.swift in Sources */,
+				E4779C0226C0A4A70041E531 /* RegistrationView.swift in Sources */,
 				E4CF3DF526BEF6920015AEA5 /* FakeLaunchScreenViewController.swift in Sources */,
+				E483283626C0674A00B42B8A /* CustomButton.swift in Sources */,
+				E4A8677426C1F32B0097C0F5 /* ProfileViewController.swift in Sources */,
+				E4A8677626C1F3340097C0F5 /* ProfileView.swift in Sources */,
+				E4A8677126C1ED880097C0F5 /* Constants.swift in Sources */,
 				E4CF3DF926BEF82B0015AEA5 /* LoginViewController.swift in Sources */,
 				E4CF3E0726BF00F80015AEA5 /* ViewCode.swift in Sources */,
+				E4779BFD26C091450041E531 /* AuthService.swift in Sources */,
+				E4A8677826C1F33C0097C0F5 /* ProfilePresenter.swift in Sources */,
+				E4779C0026C0A49B0041E531 /* RegistrationViewController.swift in Sources */,
 				E4CF3DF726BEF6AF0015AEA5 /* MainTabBarController.swift in Sources */,
 				E4CF3E0B26BF01980015AEA5 /* FakeLaunchScreenView.swift in Sources */,
+				E4A8676D26C1EC910097C0F5 /* Registration.swift in Sources */,
 				E4CF3E0926BF013B0015AEA5 /* BaseViewController.swift in Sources */,
 				E4CF3DC426BEF5BF0015AEA5 /* AppDelegate.swift in Sources */,
 				E4CF3E1226BF0E170015AEA5 /* LoginView.swift in Sources */,
+				E4779C0426C0A4B00041E531 /* RegistrationPresenter.swift in Sources */,
+				E4779C0626C0ABA50041E531 /* UIButton+AttributedTitle.swift in Sources */,
+				E4779BFB26C085C20041E531 /* AuthCredentials.swift in Sources */,
 				E4CF3E0F26BF03AC0015AEA5 /* UIView+Constraints.swift in Sources */,
 				E4CF3DC626BEF5BF0015AEA5 /* SceneDelegate.swift in Sources */,
 			);

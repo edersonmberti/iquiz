@@ -12,6 +12,7 @@ target 'iQuiz' do
   pod 'Firebase/Storage'
   pod 'Firebase/Messaging'
   pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 
   target 'iQuizTests' do
     inherit! :search_paths

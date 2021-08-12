@@ -1,13 +1,13 @@
 //
-//  LoginView.swift
+//  RegistrationView.swift
 //  iQuiz
 //
-//  Created by Ederson Machado Berti on 07/08/21.
+//  Created by Ederson Machado Berti on 08/08/21.
 //
 
 import UIKit
 
-class LoginView: UIView {
+class RegistrationView: UIView {
     
     let emailTextField: CustomTextField = {
         $0.keyboardType = .emailAddress
@@ -19,18 +19,19 @@ class LoginView: UIView {
         return $0
     }(CustomTextField(placeholder: "Password"))
     
-    let loginButton: CustomButton = {
-        $0.alpha = 0.7
-        $0.isEnabled = false
-        return $0
-    }(CustomButton(placeholder: "Log In"))
+    let fullnameTextField: CustomTextField = CustomTextField(placeholder: "Fullname")
     
-    let dontHaveAccountButton: UIButton = {
-        $0.attributedTitle(firstPart: "Don't have an account?", secondPart: "Sing Up")
+    let signUpButton: CustomButton = CustomButton(placeholder: "Sing Up")
+    
+    let alreadyAccountButton: UIButton = {
+        $0.attributedTitle(firstPart: "Already have an account?", secondPart: "Sing In")
         return $0
     }(UIButton(type: .system))
     
-    lazy var formStack = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton])
+    lazy var formStack = UIStackView(arrangedSubviews: [emailTextField,
+                                                        passwordTextField,
+                                                        fullnameTextField,
+                                                        signUpButton])
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,11 +46,11 @@ class LoginView: UIView {
     }
 }
 
-extension LoginView: ViewCode {
+extension RegistrationView: ViewCode {
     
     func buildViewHierarchy() {
         addSubview(formStack)
-        addSubview(dontHaveAccountButton)
+        addSubview(alreadyAccountButton)
     }
     
     func setupConstraints() {
@@ -64,7 +65,7 @@ extension LoginView: ViewCode {
             paddingRight: 32
         )
         
-        dontHaveAccountButton.centerX(inView: self)
-        dontHaveAccountButton.anchor(bottom: safeAreaLayoutGuide.bottomAnchor, paddingBottom: 16)
+        alreadyAccountButton.centerX(inView: self)
+        alreadyAccountButton.anchor(bottom: safeAreaLayoutGuide.bottomAnchor, paddingBottom: 16)
     }
 }
