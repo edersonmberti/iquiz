@@ -24,16 +24,24 @@ class LoginViewController: BaseViewController<LoginView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTextFields()
         setupNavigationBar()
         setupNotificationObservers()
     }
     
-    func setupNavigationBar() {
+    private func setupTextFields() {
+        customView.emailTextField.delegate = self
+        customView.passwordTextField.delegate = self
+        customView.emailTextField.returnKeyType = .next
+        customView.passwordTextField.returnKeyType = .done
+    }
+    
+    private func setupNavigationBar() {
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
     }
     
-    func setupNotificationObservers() {
+    private func setupNotificationObservers() {
         customView.emailTextField.addTarget(self, action: #selector(textChanged), for: .editingChanged)
         customView.passwordTextField.addTarget(self, action: #selector(textChanged), for: .editingChanged)
         customView.loginButton.addTarget(self, action: #selector(loginTouched), for: .touchUpInside)
@@ -47,15 +55,16 @@ class LoginViewController: BaseViewController<LoginView> {
     }
     
     @objc private func loginTouched() {
-        presenter.loginTouched()
+        presenter.login()
     }
     
     @objc private func dontHaveAccountTouched() {
-        presenter.dontHaveAccountTouched()
+        presenter.dontHaveAccount()
     }
     
     @objc private func textChanged(_ sender: UITextField) {
         if (sender == customView.emailTextField) {
+            sender.text = sender.text?.lowercased()
             presenter.updateEmail(with: sender.text ?? "")
         } else {
             presenter.updatePassword(with: sender.text ?? "")
@@ -88,5 +97,19 @@ extension LoginViewController: LoginViewProtocol {
         
         let mainTabBarController = MainTabBarController()
         navigationController?.pushViewController(mainTabBarController, animated: false)
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == customView.emailTextField {
+            customView.passwordTextField.becomeFirstResponder()
+        } else {
+            presenter.login()
+            textField.resignFirstResponder()
+        }
+        
+        return true
     }
 }

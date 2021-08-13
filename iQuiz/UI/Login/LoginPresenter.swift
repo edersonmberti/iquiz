@@ -10,8 +10,8 @@ import Foundation
 protocol LoginPresenterProtocol {
     
     var isValid: Bool { get }
-    func dontHaveAccountTouched()
-    func loginTouched()
+    func dontHaveAccount()
+    func login()
     func updateEmail(with email: String)
     func updatePassword(with password: String)
 }
@@ -50,7 +50,7 @@ extension LoginPresenter: LoginPresenterProtocol {
         view?.updateLayout()
     }
     
-    func loginTouched() {
+    func login() {
         guard let email = email?.lowercased() else { return }
         guard let password = password else { return }
         
@@ -64,7 +64,7 @@ extension LoginPresenter: LoginPresenterProtocol {
         }
     }
     
-    func dontHaveAccountTouched() {
+    func dontHaveAccount() {
         view?.redirectToRegistration()
     }
 }
