@@ -21,9 +21,10 @@ class CustomButton: UIButton {
     
     private func setupLayout(placeholder: String) {
         setHeight(50)
-        backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+        backgroundColor = Colors.blue
         setTitle(placeholder, for: .normal)
         setTitleColor(.white, for: .normal)
+        layer.cornerRadius = 10
         titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
     }
 }

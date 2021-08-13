@@ -36,7 +36,7 @@ class RegistrationView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .systemTeal
+        backgroundColor = Colors.background
         
         setupLayout()
     }

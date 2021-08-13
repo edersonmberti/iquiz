@@ -26,9 +26,9 @@ class CustomTextField: UITextField {
         leftView = spacer
         leftViewMode = .always
         borderStyle = .none
-        textColor = .white
-        keyboardAppearance = .dark
-        backgroundColor = UIColor(white: 1, alpha: 0.1)
-        attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
+        layer.cornerRadius = 10
+        textColor = Colors.textPrimary
+        backgroundColor = Colors.surface
+        attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: Colors.textPrimary])
     }
 }

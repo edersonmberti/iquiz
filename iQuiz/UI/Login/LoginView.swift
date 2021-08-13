@@ -20,7 +20,6 @@ class LoginView: UIView {
     }(CustomTextField(placeholder: "Password"))
     
     let loginButton: CustomButton = {
-        $0.alpha = 0.7
         $0.isEnabled = false
         return $0
     }(CustomButton(placeholder: "Log In"))
@@ -35,7 +34,7 @@ class LoginView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .systemTeal
+        backgroundColor = Colors.background
         
         setupLayout()
     }

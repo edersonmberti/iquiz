@@ -40,6 +40,7 @@
 		E4CF3E1226BF0E170015AEA5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E1126BF0E170015AEA5 /* LoginView.swift */; };
 		E4CF3E1426BF0E1F0015AEA5 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3E1326BF0E1F0015AEA5 /* LoginPresenter.swift */; };
 		E4CF3E1626BF15C30015AEA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4CF3E1526BF15C30015AEA5 /* GoogleService-Info.plist */; };
+		E4F59D7B26C5E955000EF11C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F59D7A26C5E955000EF11C /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		E4CF3E1126BF0E170015AEA5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E4CF3E1326BF0E1F0015AEA5 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		E4CF3E1526BF15C30015AEA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E4F59D7A26C5E955000EF11C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +317,7 @@
 			children = (
 				E4CF3E0626BF00F80015AEA5 /* ViewCode.swift */,
 				E4A8677026C1ED880097C0F5 /* Constants.swift */,
+				E4F59D7A26C5E955000EF11C /* Colors.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				E4CF3DC426BEF5BF0015AEA5 /* AppDelegate.swift in Sources */,
 				E4CF3E1226BF0E170015AEA5 /* LoginView.swift in Sources */,
 				E4779C0426C0A4B00041E531 /* RegistrationPresenter.swift in Sources */,
+				E4F59D7B26C5E955000EF11C /* Colors.swift in Sources */,
 				E4779C0626C0ABA50041E531 /* UIButton+AttributedTitle.swift in Sources */,
 				E4779BFB26C085C20041E531 /* AuthCredentials.swift in Sources */,
 				E4CF3E0F26BF03AC0015AEA5 /* UIView+Constraints.swift in Sources */,

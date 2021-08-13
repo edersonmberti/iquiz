@@ -71,13 +71,7 @@ extension LoginViewController: LoginViewProtocol {
     }
     
     func updateLayout() {
-        if presenter.isValid {
-            customView.loginButton.alpha = 1.0
-            customView.loginButton.isEnabled = true
-        } else {
-            customView.loginButton.alpha = 0.7
-            customView.loginButton.isEnabled = false
-        }
+        customView.loginButton.isEnabled = presenter.isValid
     }
     
     func updateLoading() {

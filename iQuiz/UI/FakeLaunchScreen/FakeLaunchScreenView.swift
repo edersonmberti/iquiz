@@ -12,7 +12,7 @@ class FakeLaunchScreenView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .lightGray
+        backgroundColor = Colors.background
         
         setupLayout()
     }
