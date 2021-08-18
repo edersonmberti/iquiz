@@ -9,17 +9,18 @@ import Foundation
 
 protocol RegistrationPresenterProtocol {
     
-    func alreadyAccountTouched()
-    func signUpTouched()
-    func updateEmail(with email: String?)
-    func updatePassword(with password: String?)
-    func updateFullname(with fullname: String?)
+    var isValid: Bool { get }
+    func alreadyAccount()
+    func signUp()
+    func updateFormValue(email: String?)
+    func updateFormValue(password: String?)
+    func updateFormValue(fullname: String?)
 }
 
 class RegistrationPresenter {
     
     private let authService: AuthServiceProtocol
-    weak var view: RegistrationViewProtocol?
+    private weak var view: RegistrationViewProtocol?
     
     private var email: String?
     private var password: String?
@@ -33,36 +34,48 @@ class RegistrationPresenter {
 
 extension RegistrationPresenter: RegistrationPresenterProtocol {
     
-    func alreadyAccountTouched() {
+    var isValid: Bool {
+        return email?.isEmpty == false
+            && password?.isEmpty == false
+            && fullname?.isEmpty == false
+    }
+    
+    func alreadyAccount() {
         view?.redirectToLogin()
     }
     
-    func signUpTouched() {
+    func signUp() {
         guard let email = email else { return }
         guard let password = password else { return }
         guard let fullname = fullname else { return }
+        
+        view?.updateRegistrationLoading()
         
         let registrationData = Registration(email: email, password: password, fullname: fullname)
         
         authService.registerUser(with: registrationData, completion: { error in
             if let error = error {
+                self.view?.updateRegistrationError(errorMessage: error.localizedDescription)
                 print("DEBUG: Failed to register user \(error.localizedDescription)")
                 return
             }
             
-            self.view?.redirectToMainTabBar()
+            self.view?.updateRegistrationSuccess()
         })
     }
     
-    func updateEmail(with email: String?) {
+    func updateFormValue(email: String?) {
         self.email = email
+        view?.updateLayout()
     }
     
-    func updatePassword(with password: String?) {
+    func updateFormValue(password: String?) {
         self.password = password
+        view?.updateLayout()
     }
     
-    func updateFullname(with fullname: String?) {
+    func updateFormValue(fullname: String?) {
         self.fullname = fullname
+        view?.updateLayout()
     }
 }

@@ -10,20 +10,33 @@ import UIKit
 protocol RegistrationViewProtocol: AnyObject {
     
     func redirectToLogin()
-    func redirectToMainTabBar()
+    func updateLayout()
+    func updateRegistrationLoading()
+    func updateRegistrationSuccess()
+    func updateRegistrationError(errorMessage: String)
 }
 
 class RegistrationViewController: BaseViewController<RegistrationView> {
     
-    lazy var presenter: RegistrationPresenterProtocol = RegistrationPresenter(view: self)
+    private lazy var presenter: RegistrationPresenterProtocol = RegistrationPresenter(view: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTextFields()
         setupNotificationObservers()
     }
     
-    func setupNotificationObservers() {
+    private func setupTextFields() {
+        customView.emailTextField.delegate = self
+        customView.passwordTextField.delegate = self
+        customView.fullnameTextField.delegate = self
+        customView.emailTextField.returnKeyType = .next
+        customView.passwordTextField.returnKeyType = .next
+        customView.fullnameTextField.returnKeyType = .done
+    }
+    
+    private func setupNotificationObservers() {
         customView.emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         customView.passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         customView.fullnameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
@@ -32,33 +45,64 @@ class RegistrationViewController: BaseViewController<RegistrationView> {
     }
     
     @objc private func signUpTouched() {
-        presenter.signUpTouched()
+        presenter.signUp()
     }
     
     @objc private func alreadyAccountTouched() {
-        presenter.alreadyAccountTouched()
+        presenter.alreadyAccount()
     }
     
     @objc private func textDidChange(_ sender: UITextField) {
         switch sender {
         case customView.emailTextField:
-            presenter.updateEmail(with: sender.text)
+            presenter.updateFormValue(email: sender.text)
         case customView.passwordTextField:
-            presenter.updatePassword(with: sender.text)
+            presenter.updateFormValue(password: sender.text)
         default:
-            presenter.updateFullname(with: sender.text)
+            presenter.updateFormValue(fullname: sender.text)
         }
     }
 }
 
 extension RegistrationViewController: RegistrationViewProtocol {
     
+    func updateLayout() {
+        customView.signUpButton.isEnabled = presenter.isValid
+    }
+
     func redirectToLogin() {
         navigationController?.popViewController(animated: true)
     }
     
-    func redirectToMainTabBar() {
+    func updateRegistrationLoading() {
+        self.showLoader()
+    }
+    
+    func updateRegistrationError(errorMessage: String) {
+        self.hideLoader()
+    }
+    
+    func updateRegistrationSuccess() {
+        self.hideLoader()
+        
         let MainTabBarController = MainTabBarController()
-        navigationController?.pushViewController(MainTabBarController, animated: true)
+        navigationController?.pushViewController(MainTabBarController, animated: false)
+    }
+}
+
+extension RegistrationViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case customView.emailTextField:
+            customView.passwordTextField.becomeFirstResponder()
+        case customView.passwordTextField:
+            customView.fullnameTextField.becomeFirstResponder()
+        default:
+            presenter.signUp()
+            textField.resignFirstResponder()
+        }
+        
+        return true
     }
 }

@@ -22,7 +22,6 @@ class LoginPresenter {
     private var password: String?
     private let authService: AuthServiceProtocol
     
-    
     weak var view: LoginViewProtocol?
     
     init(view: LoginViewProtocol, authService: AuthServiceProtocol = AuthService()) {
@@ -53,6 +52,8 @@ extension LoginPresenter: LoginPresenterProtocol {
     func login() {
         guard let email = email?.lowercased() else { return }
         guard let password = password else { return }
+        
+        view?.updateLoginLoading()
         
         authService.signIn(withEmail: email, password: password) { result, error in
             if let error = error {

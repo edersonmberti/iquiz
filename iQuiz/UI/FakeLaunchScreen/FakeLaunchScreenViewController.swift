@@ -14,7 +14,7 @@ protocol FakeLaunchScreenViewProtocol: AnyObject {
 
 class FakeLaunchScreenViewController: BaseViewController<FakeLaunchScreenView> {
     
-    lazy var presenter: FakeLaunchScreenPresenterProtocol = FakeLaunchScreenPresenter(view: self)
+    private lazy var presenter: FakeLaunchScreenPresenterProtocol = FakeLaunchScreenPresenter(view: self)
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -26,7 +26,6 @@ class FakeLaunchScreenViewController: BaseViewController<FakeLaunchScreenView> {
 extension FakeLaunchScreenViewController: FakeLaunchScreenViewProtocol {
     
     func redirectUser(isAuthenticated: Bool) {
-        print("DEBUG: Redirect user with: \(isAuthenticated)")
         let controller = isAuthenticated ?
             MainTabBarController() :
             UINavigationController(rootViewController: LoginViewController())
