@@ -19,6 +19,7 @@ extension ViewCode {
     func setupLayout() {
         setupHierarchy()
         setupConstraints()
+        additionalSetup()
     }
     
     func additionalSetup() { }

@@ -24,6 +24,8 @@
 		E4A8677626C1F3340097C0F5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8677526C1F3340097C0F5 /* ProfileView.swift */; };
 		E4A8677826C1F33C0097C0F5 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8677726C1F33C0097C0F5 /* ProfilePresenter.swift */; };
 		E4A950B926CDC193001AF216 /* CustomSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A950B826CDC193001AF216 /* CustomSpinner.swift */; };
+		E4A950BB26CDC938001AF216 /* ViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A950BA26CDC938001AF216 /* ViewControllerPreview.swift */; };
+		E4A950BD26CDD2A4001AF216 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A950BC26CDD2A4001AF216 /* UIViewController+Keyboard.swift */; };
 		E4C0A8BD26CC916700FB8550 /* UIViewController+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0A8BC26CC916700FB8550 /* UIViewController+Loader.swift */; };
 		E4CF3DC426BEF5BF0015AEA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DC326BEF5BF0015AEA5 /* AppDelegate.swift */; };
 		E4CF3DC626BEF5BF0015AEA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF3DC526BEF5BF0015AEA5 /* SceneDelegate.swift */; };
@@ -86,6 +88,8 @@
 		E4A8677526C1F3340097C0F5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E4A8677726C1F33C0097C0F5 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		E4A950B826CDC193001AF216 /* CustomSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSpinner.swift; sourceTree = "<group>"; };
+		E4A950BA26CDC938001AF216 /* ViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPreview.swift; sourceTree = "<group>"; };
+		E4A950BC26CDD2A4001AF216 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		E4C0A8BC26CC916700FB8550 /* UIViewController+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loader.swift"; sourceTree = "<group>"; };
 		E4CF3DC026BEF5BF0015AEA5 /* iQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CF3DC326BEF5BF0015AEA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 				E4CF3E0E26BF03AC0015AEA5 /* UIView+Constraints.swift */,
 				E4779C0526C0ABA50041E531 /* UIButton+AttributedTitle.swift */,
 				E4C0A8BC26CC916700FB8550 /* UIViewController+Loader.swift */,
+				E4A950BC26CDD2A4001AF216 /* UIViewController+Keyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 		E4CF3E0326BEFF260015AEA5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E4A950BA26CDC938001AF216 /* ViewControllerPreview.swift */,
 				E4CF3E0626BF00F80015AEA5 /* ViewCode.swift */,
 				E4A8677026C1ED880097C0F5 /* Constants.swift */,
 				E4F59D7A26C5E955000EF11C /* Colors.swift */,
@@ -579,6 +585,7 @@
 			files = (
 				E483283426C0658D00B42B8A /* CustomTextField.swift in Sources */,
 				E4CF3E1426BF0E1F0015AEA5 /* LoginPresenter.swift in Sources */,
+				E4A950BB26CDC938001AF216 /* ViewControllerPreview.swift in Sources */,
 				E4CF3E0D26BF01CB0015AEA5 /* FakeLaunchScreenPresenter.swift in Sources */,
 				E4779C0226C0A4A70041E531 /* RegistrationView.swift in Sources */,
 				E4CF3DF526BEF6920015AEA5 /* FakeLaunchScreenViewController.swift in Sources */,
@@ -601,6 +608,7 @@
 				E4779C0426C0A4B00041E531 /* RegistrationPresenter.swift in Sources */,
 				E4F59D7B26C5E955000EF11C /* Colors.swift in Sources */,
 				E4C0A8BD26CC916700FB8550 /* UIViewController+Loader.swift in Sources */,
+				E4A950BD26CDD2A4001AF216 /* UIViewController+Keyboard.swift in Sources */,
 				E4779C0626C0ABA50041E531 /* UIButton+AttributedTitle.swift in Sources */,
 				E4779BFB26C085C20041E531 /* AuthCredentials.swift in Sources */,
 				E4CF3E0F26BF03AC0015AEA5 /* UIView+Constraints.swift in Sources */,

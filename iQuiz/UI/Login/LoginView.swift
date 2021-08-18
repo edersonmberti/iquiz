@@ -34,8 +34,6 @@ class LoginView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = Colors.background
-        
         setupLayout()
     }
     
@@ -65,5 +63,9 @@ extension LoginView: ViewCode {
         
         dontHaveAccountButton.centerX(inView: self)
         dontHaveAccountButton.anchor(bottom: safeAreaLayoutGuide.bottomAnchor, paddingBottom: 16)
+    }
+    
+    func additionalSetup() {
+        backgroundColor = Colors.background
     }
 }

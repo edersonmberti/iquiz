@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Firebase
+import SwiftUI
 
 protocol LoginViewProtocol: AnyObject {
     
@@ -23,7 +23,6 @@ class LoginViewController: BaseViewController<LoginView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupTextFields()
         setupNavigationBar()
         setupNotificationObservers()
@@ -42,6 +41,8 @@ class LoginViewController: BaseViewController<LoginView> {
     }
     
     private func setupNotificationObservers() {
+        self.dismissKeyboardWhenTouchedAround()
+        
         customView.emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         customView.passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         customView.loginButton.addTarget(self, action: #selector(loginTouched), for: .touchUpInside)
@@ -49,6 +50,7 @@ class LoginViewController: BaseViewController<LoginView> {
     }
     
     @objc private func loginTouched() {
+        view.endEditing(true)
         presenter.login()
     }
     
@@ -105,5 +107,13 @@ extension LoginViewController: UITextFieldDelegate {
         }
         
         return true
+    }
+}
+
+struct LoginViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        ViewControllerPreview {
+            LoginViewController()
+        }
     }
 }

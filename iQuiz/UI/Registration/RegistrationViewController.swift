@@ -37,6 +37,8 @@ class RegistrationViewController: BaseViewController<RegistrationView> {
     }
     
     private func setupNotificationObservers() {
+        self.dismissKeyboardWhenTouchedAround()
+        
         customView.emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         customView.passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         customView.fullnameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
@@ -45,6 +47,7 @@ class RegistrationViewController: BaseViewController<RegistrationView> {
     }
     
     @objc private func signUpTouched() {
+        view.endEditing(true)
         presenter.signUp()
     }
     
