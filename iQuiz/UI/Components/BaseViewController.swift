@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseViewController<View>:  UIViewController where View: ViewCode {
+class BaseViewController<View>: UIViewController where View: ViewCode {
     
     var customView: View = .init()
     

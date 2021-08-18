@@ -9,14 +9,17 @@ import UIKit
 
 protocol ViewCode: UIView {
     
-    func buildViewHierarchy()
+    func setupHierarchy()
     func setupConstraints()
+    func additionalSetup()
 }
 
 extension ViewCode {
     
     func setupLayout() {
-        buildViewHierarchy()
+        setupHierarchy()
         setupConstraints()
     }
+    
+    func additionalSetup() { }
 }

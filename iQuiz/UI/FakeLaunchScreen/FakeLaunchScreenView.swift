@@ -24,7 +24,7 @@ class FakeLaunchScreenView: UIView {
 
 extension FakeLaunchScreenView: ViewCode {
     
-    func buildViewHierarchy() {}
+    func setupHierarchy() {}
     
     func setupConstraints() {}
 }

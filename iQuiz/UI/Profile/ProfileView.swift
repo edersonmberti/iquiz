@@ -29,7 +29,7 @@ class ProfileView: UIView {
 
 extension ProfileView: ViewCode {
     
-    func buildViewHierarchy() {
+    func setupHierarchy() {
         addSubview(signOutButton)
     }
     

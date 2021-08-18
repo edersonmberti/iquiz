@@ -46,7 +46,7 @@ class LoginView: UIView {
 
 extension LoginView: ViewCode {
     
-    func buildViewHierarchy() {
+    func setupHierarchy() {
         addSubview(formStack)
         addSubview(dontHaveAccountButton)
     }

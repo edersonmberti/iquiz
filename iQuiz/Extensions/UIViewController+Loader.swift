@@ -59,7 +59,7 @@ extension UIViewController {
     }
     
     private func createCircularPath(radius: CGFloat) -> UIBezierPath {
-        return UIBezierPath(
+        UIBezierPath(
             arcCenter: CGPoint(x: 45, y: 45),
             radius: radius,
             startAngle: -CGFloat.pi / 2,

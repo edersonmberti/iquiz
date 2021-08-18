@@ -48,7 +48,7 @@ class RegistrationView: UIView {
 
 extension RegistrationView: ViewCode {
     
-    func buildViewHierarchy() {
+    func setupHierarchy() {
         addSubview(formStack)
         addSubview(alreadyAccountButton)
     }
