@@ -1,0 +1,16 @@
+{
+  "name": "iQuiz",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "yarn react-native start",
+    "ios": "react-native run-ios"
+  },
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-native": "^0.65.1"
+  },
+  "devDependencies": {
+    "react-native-codegen": "^0.0.7"
+  }
+}

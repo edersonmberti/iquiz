@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import React
 
 protocol ProfileViewProtocol: AnyObject {
     
@@ -27,7 +28,30 @@ class ProfileViewController: BaseViewController<ProfileView> {
     }
     
     @objc private func signOutTouched() {
-        presenter.signOutTouched()
+        setupReactNativeScreen()
+//        presenter.signOutTouched()
+    }
+    
+    private func setupReactNativeScreen() {
+        print("Hello")
+        guard let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios") else { return }
+        let mockData:NSDictionary = ["scores":
+            [
+                ["name":"Alex", "value":"42"],
+                ["name":"Joel", "value":"10"]
+            ]
+        ]
+
+        let rootView = RCTRootView(
+            bundleURL: jsCodeLocation,
+            moduleName: "RNHighScores",
+            initialProperties: mockData as [NSObject : AnyObject],
+            launchOptions: nil
+        )
+        let vc = UIViewController()
+        vc.view = rootView
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: false, completion: nil)
     }
 }
 
